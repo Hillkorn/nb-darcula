@@ -57,14 +57,6 @@
             </snapshots>
             <url>file:///${project.basedir}/lib</url>
         </repository>
-        <repository>
-            <id>netbeans</id>
-            <name>Repository hosting NetBeans modules</name>
-            <url>http://bits.netbeans.org/nexus/content/groups/netbeans</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
     </repositories>
 
     <dependencies>
@@ -87,6 +79,11 @@
         </dependency>
 
         <!-- For NbPreferences and Lookup -->
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-util-ui</artifactId>
+            <version>${netbeans.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-openide-util-lookup</artifactId>
@@ -120,7 +117,7 @@
     </dependencies>
 
     <properties>
-        <netbeans.version>RELEASE80</netbeans.version>
+        <netbeans.version>RELEASE124</netbeans.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <description> A NetBeans Look And Feel plugin using Darcula of IntelliJ IDEA.
